@@ -1,0 +1,1 @@
+export {InputFrm} from './inputform'

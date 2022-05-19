@@ -1,0 +1,1 @@
+export {AvatarDefault} from './defaultavatar'

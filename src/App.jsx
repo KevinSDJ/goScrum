@@ -1,8 +1,11 @@
+'useStrict'
+import {BrowserRouter} from 'react-router-dom'
+import AnimateRoutes from "./routes/animateroutes"
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+       <AnimateRoutes/>
+    </BrowserRouter>
   )
 }
 
