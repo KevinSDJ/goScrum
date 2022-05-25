@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/react"
 
-export const Linkbtn=({label,color,size})=>{
-    return <Button variant="link" colorScheme={color} size={size}>
+export const Linkbtn=({label,color,size,onclick})=>{
+    return <Button onClick={onclick} variant="link" colorScheme={color} size={size}>
           {label}
     </Button>
 }

@@ -1,10 +1,15 @@
-import React from 'react';
+import {useState} from 'react';
 import {
     Container,
 } from '@chakra-ui/react';
-import { Signin } from '../atomic/organisms/Forms';
+import { Signin ,SignUp} from '../atomic/organisms/Forms';
+
 
 const AuthPage = () => {
+    const [isSignin,setIsSignin]= useState(true)
+    const changesection=(e)=>{
+        setIsSignin(!isSignin)
+    }
     return (
         <Container
             maxW={'100vw'}
@@ -16,7 +21,8 @@ const AuthPage = () => {
             alignItems={'center'}
             justifyContent={'center'}
         >
-            <Signin/>
+            {isSignin&& <Signin changeform={changesection}/>}
+            {!isSignin && <SignUp changeform={changesection}/>}
         </Container>
     )
 }

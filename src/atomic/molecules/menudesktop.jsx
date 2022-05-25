@@ -10,7 +10,7 @@ export const MenuDesktop=()=>{
          <Box>
              <Menu>
                 <Menubtn />
-               <MenuListItems list={list}/>
+               <MenuListItems  list={list}/>
             </Menu>
         </Box>)
 }

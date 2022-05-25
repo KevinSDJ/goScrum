@@ -1,10 +1,16 @@
-import {HStack,Box,StackDivider} from '@chakra-ui/react'
+import {HStack,Box,StackDivider,Heading} from '@chakra-ui/react'
+import { useState } from 'react'
+import { TaskForm } from '../organisms/Forms/crateTask'
+import TasksSection from '../organisms/tasks_section/'
 
 export const DesktopLayout =()=>{
+    const [formselect,setFormselect] = useState('create')
     return (
-        <HStack divider={<StackDivider/>} h={'full'} align={'flex-start'} paddingBlockStart={'10'}>
-            <Box h={'200px'} bgColor={'blue.200'} w='40%'>create task</Box>
-            <Box h={'100px'} bgColor={'blue.200'} w='60%'>cards</Box>
+        <HStack divider={<StackDivider/>} justify='space-between' h={'auto'} align={'flex-start'} paddingBlockStart={'10'}>
+            <Box w='auto'>
+               <TaskForm/>
+            </Box>
+            <TasksSection/>
         </HStack>
     )
 }

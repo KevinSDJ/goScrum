@@ -1,9 +1,9 @@
 import {Stack,HStack,Text,Divider} from '@chakra-ui/react'
 
 
-export const FormFooter=({signinbtn:Signinbtn,otherauthmethod:Otherauthmethod})=>{
+export const FormFooter=({signinbtn:Signinbtn,otherauthmethod:Otherauthmethod,...arg})=>{
     return (<Stack spacing="6">
-    <Signinbtn label={'Sign in'} colorScheme={'red'} variant="solid" />
+    <Signinbtn  {...arg} colorScheme={'red'} variant="solid" />
     {Otherauthmethod&&<HStack>
         <Divider />
         <Text fontSize="sm" whiteSpace="nowrap" color="muted">
