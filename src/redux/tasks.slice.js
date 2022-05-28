@@ -6,29 +6,22 @@ import { ENDPOINT } from '../utilities/settings'
 
 
 const taskSlice = createSlice({
-    initialState:{data:[],status:'',error:''},
+    initialState:{data:[],status:''},
     name:'tasks',
-    reducers:{
-        cleanReqMsg:(state,action)=>{
-            return {...state,status:'',error:''}
-        }
-    },extraReducers:(builder)=>{
+    reducers:{},
+    extraReducers:(builder)=>{
         builder.addCase(getTasks.pending,(state,action)=>{
-            return {...state,status:'pending'}
+            return {...state,status:'loading'}
         })
         builder.addCase(getTasks.fulfilled,(state,action)=>{
             return {...state,status:'success',data:action.payload.result}
         })
-        builder.addCase(getTasks.rejected,(state,action)=>{
-            return {...state,status:'error',error:action.response}
-        })
         /*------------------create task------------------*/
+        builder.addCase(postTask.pending,(state,action)=>{
+            return {...state,status:'loading'}
+        })
         builder.addCase(postTask.fulfilled,(state,action)=>{
             state.status='success'
-        })
-        builder.addCase(postTask.rejected,(state,action)=>{
-            state.status='error'
-            state.error=action.payload.response
         })
     }
 })
