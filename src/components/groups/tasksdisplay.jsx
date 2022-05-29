@@ -1,5 +1,5 @@
 import {Box,Stack,Heading,VStack} from '@chakra-ui/react'
-import CardTask from './../organisms/card'
+import CardTask from '../component/card-desktop'
 
 
 

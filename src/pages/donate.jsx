@@ -1,7 +1,7 @@
 import {Container} from '@chakra-ui/react'
-import { DonateBox } from '../atomic/molecules'
+import { DonateBox } from '../components/groups'
 
-export default function DonatePage(){
+export const DonatePage=()=>{
 
     return (
     <Container

@@ -12,7 +12,11 @@ dist
 dist-ssr
 *.local
 /Colors.md
+#enviroments
 .env
+
+#others
+*.text
 
 # Editor directories and files
 .vscode/*

@@ -1,11 +1,11 @@
 import { useState ,useEffect} from 'react'
-import { Formbox, Formbody, Headerform, FormFooter } from './../../atoms/boxes'
+import { Formbox, Formbody, Headerform, FormFooter } from '../../elements/boxes'
 import { Stack, FormControl, FormLabel, FormErrorMessage, Select } from '@chakra-ui/react'
-import LogoPrimary from '../../atoms/Logo/logonormal'
-import { Linkbtn, Primarybtn } from '../../atoms/buttons'
+import LogoPrimary from '../../elements/Logo/logonormal'
+import { Linkbtn, Primarybtn } from '../../elements/buttons'
 import { useFormik } from 'formik'
 import { SignUpSchema } from '../../../utilities/validateauthschemas'
-import { InputFrm } from '../../atoms/inputs'
+import { InputFrm } from '../../elements/inputs'
 import { ENDPOINT } from '../../../utilities/settings'
 export const SignUp = ({ changeform }) => {
     const [registerdata,setRegData]= useState(null)

@@ -1,11 +1,11 @@
 import { FormErrorMessage ,FormControl ,FormLabel,Stack,HStack,Checkbox} from '@chakra-ui/react'
 import { useFormik} from 'formik'
-import { Formbox ,Headerform,Formbody,FormFooter} from '../../atoms/boxes'
-import { Linkbtn ,Primarybtn} from '../../atoms/buttons'
-import LogoPrimary from '../../atoms/Logo/logonormal'
-import {InputFrm} from './../../atoms/inputs'
+import { Formbox ,Headerform,Formbody,FormFooter} from '../../elements/boxes'
+import { Linkbtn ,Primarybtn} from '../../elements/buttons'
+import LogoPrimary from '../../elements/Logo/logonormal'
+import {InputFrm} from '../../elements/inputs'
 import { SignInSchema } from '../../../utilities/validateauthschemas'
-import {fetchSignIn} from './../../../redux/user.slice'
+import {fetchSignIn} from '../../../redux/user.slice'
 import {useDispatch} from 'react-redux'
 
 

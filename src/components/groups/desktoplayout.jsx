@@ -1,7 +1,7 @@
 import {HStack,Box,StackDivider,Heading} from '@chakra-ui/react'
 import { useState } from 'react'
-import { TaskForm } from '../organisms/Forms/crateTask'
-import TasksSection from '../organisms/tasks_section/'
+import { TaskForm } from '../component/Forms/crateTask'
+import TasksSection from '../component/tasks_section'
 
 export const DesktopLayout =()=>{
     const [formselect,setFormselect] = useState('create')

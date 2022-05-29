@@ -1,8 +1,8 @@
 import { Box, Stack, VStack, Divider, HStack, Heading, RadioGroup, Radio,Select,Spacer,useBreakpointValue } from '@chakra-ui/react'
 import { useSelector } from 'react-redux'
 import { useState,useEffect,useLayoutEffect } from 'react'
-import {TasksDisplay} from './../../molecules/'
-import {Searchbar} from './../../molecules'
+import {TasksDisplay} from '../../groups'
+import {Searchbar} from '../../groups'
 
 
 export default function TasksSection() {
