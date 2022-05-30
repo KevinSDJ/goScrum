@@ -1,7 +1,10 @@
-import {Input} from '@chakra-ui/react'
+import {Input,InputGroup,InputLeftElement} from '@chakra-ui/react'
 import { useId, useRef } from "react"
+import { useScreentype } from '../../hooks'
+import {RiSearch2Line} from 'react-icons/ri'
 
 export const Searchbar = ({setList,data}) => {
+    const iseMobile= useScreentype()
     let inputref=useRef()
     let timeout
     const onChange = (e) => {
@@ -16,6 +19,20 @@ export const Searchbar = ({setList,data}) => {
         }, 500)
     }
     return (
-        <Input type='text' borderColor={'gray'} ref={inputref} maxW={'20rem'} key={useId()} onChange={onChange} placeholder='buscar por titulo' name='search'  required />
+        <InputGroup w={'auto'}>
+        <InputLeftElement
+          pointerEvents='none'
+          children={<RiSearch2Line color='gray.300' />}
+        />
+        <Input 
+        type='text' 
+        borderColor='gray' 
+        ref={inputref} 
+        maxW={(iseMobile&&'100%')||'20rem'} 
+        key={useId()} onChange={onChange} 
+        placeholder='buscar por titulo....' 
+        name='search'  
+        required />
+        </InputGroup>  
     )
 }

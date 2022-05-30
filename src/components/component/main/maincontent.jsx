@@ -1,13 +1,13 @@
 
 import {Container} from '@chakra-ui/react'
 import { MobileLayout ,DesktopLayout} from '../../groups'
-import {useResize} from '../../../hooks'
+import {useScreentype} from '../../../hooks'
 export default function Main(){
-    const {screen} = useResize()
+    const isMobile= useScreentype()
     return (
     <Container maxW={'100%'} height={'calc(100vh - 8rem)'}  >
-        {screen<=1000&&<MobileLayout/>}
-        {screen>1000 &&<DesktopLayout/> }
+        {isMobile&&<MobileLayout/>}
+        {!isMobile&&<DesktopLayout/> }
     </Container>
     )
 }
