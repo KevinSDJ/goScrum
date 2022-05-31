@@ -1,5 +1,5 @@
 import {Container} from '@chakra-ui/react'
-import { DonateBox } from '../components/groups'
+import { DonateBox } from '../components/sections'
 
 export const DonatePage=()=>{
 

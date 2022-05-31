@@ -1,1 +1,0 @@
-export {InputFrm} from './inputform'

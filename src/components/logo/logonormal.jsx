@@ -1,5 +1,5 @@
 import {Heading,Text,useBreakpointValue} from '@chakra-ui/react'
-import {useResize} from '../../../hooks'
+import {useResize} from '../../hooks'
 
 export default function LogoPrimary(){
     const {screen} = useResize()

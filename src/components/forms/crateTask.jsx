@@ -1,11 +1,11 @@
-import { VStack, Heading, HStack, Input, Select, Textarea, Box } from '@chakra-ui/react'
+import { VStack, Heading, HStack,Stack, Input, Select, Textarea, Box } from '@chakra-ui/react'
 import { useId } from 'react'
-import { Formbody } from '../../elements/boxes/formbody'
-import { Primarybtn } from '../../elements/buttons'
+import { Formbody } from '../../component/elements/boxes/formbody'
+import { Primarybtn } from '../../component/elements/buttons'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
-import { postTask ,getTasks,cleanReqMsg} from '../../../redux/tasks.slice'
+import { postTask, getTasks, cleanReqMsg } from '../../redux/tasks.slice'
 
 let status = ["NEW", "IN PROGRESS", "FINISHED"]
 let priority = ["LOW", "MEDIUM", "HIGH"]
@@ -42,7 +42,19 @@ export const TaskForm = () => {
     return (
         <>
             <VStack w={'auto'} align='flex-start' padding={'0'} margin='0'>
-                <Formbody onsubmit={handleSubmit} padding={'0'}  margin='0' width='100%' color={'none'} shadowcolor={'none'}>
+                <Box as='form'
+                    onSubmit={handleSubmit}
+                    padding={'0'} 
+                    margin='0'
+                    color={'none'} 
+                    shadowcolor={'none'}
+                    py={{ base: '0', sm: '8', lg: '5' }}
+                    px={{ base: '4', sm: '10', lg: '10' }}
+                    bg={useBreakpointValue({ base: 'transparent', sm: color || '#ffffffc8' })}
+                    boxShadow={{ base: 'none', sm: shadowcolor || useColorModeValue('lg', 'dark') }}
+                    borderRadius={{ base: 'none', sm: 'xl' }}
+                >
+                    <Stack spacing="6">
                     <Heading size={'md'}> Create Task</Heading>
                     <Box display={'flex'} flexDirection='column' gap='20px 0'>
                         <HStack>
@@ -57,7 +69,8 @@ export const TaskForm = () => {
                         <Textarea value={values.description} isInvalid={errors?.description} borderColor={'gray'} name={'description'} onChange={handleChange} placeholder='description....' />
                     </Box>
                     <Primarybtn w={'max-content'} type='submit' colorScheme={'red'} variant="solid" label={'Create'} />
-                </Formbody>
+                    </Stack>
+                </Box>
             </VStack>
         </>
     )

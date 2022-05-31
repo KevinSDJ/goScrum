@@ -1,7 +1,7 @@
 import { HStack, RadioGroup, Stack, Radio, Select, useBreakpointValue, VStack ,Box} from '@chakra-ui/react'
 import { useState } from 'react'
-import { useScreentype } from '../../../hooks'
-import { Searchbar } from './../../groups'
+import { useScreentype } from '../../hooks'
+import { Searchbar } from '../../component/groups'
 
 export const Filter = ({ data, setList, direction, spacing }) => {
     let { userName } = JSON.parse(localStorage.getItem('goScrumUsr'))

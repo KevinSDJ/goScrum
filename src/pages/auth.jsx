@@ -2,7 +2,8 @@ import {useState} from 'react';
 import {
     Container,
 } from '@chakra-ui/react';
-import { Signin ,SignUp} from '../components/component/Forms';
+
+import { Login,Register } from '../components/forms';
 
 
 
@@ -22,8 +23,7 @@ export const AuthPage = () => {
             alignItems={'center'}
             justifyContent={'center'}
         >
-            {isSignin&& <Signin changeform={changesection}/>}
-            {!isSignin && <SignUp changeform={changesection}/>}
+            <Register/>
         </Container>
     )
 }
